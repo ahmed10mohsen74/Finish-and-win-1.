@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Get $1 Instantly</title>
@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #00c9ff, #92fe9d);
+            background: linear-gradient(135deg, #32626e, #000000);
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,20 +18,60 @@
             min-height: 100vh;
             text-align: center;
         }
+
         h1 {
             font-size: 2em;
             margin: 0.5em;
             color: #fff;
         }
+
+        h2 {
+            font-size: 1.2em;
+            margin: 0.5em;
+            color: #eeeeee;
+        }
+
+        h3 {
+            font-size: 1.7em;
+            margin: 0.5em;
+            color: #ffffff;
+        }
+
+        a.action-button {
+            background-color: #673ab7;
+            padding: 10px 15px;
+            margin: auto;
+            margin-bottom: 19px;
+            color: white;
+            font-weight: bold;
+            font-size: larger;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 12px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        a.action-button:hover {
+            background-color: white;
+            color: #673ab7;
+            text-shadow: 1px 1px 7px #673ab7;
+
+
+
+        }
+
         p {
             font-size: 1.2em;
             color: #f0f0f0;
             max-width: 80%;
         }
+
         .btn {
             background-color: #fff;
-            color: #00c9ff;
+            color: black;
             padding: 15px 30px;
+            font-weight: bold;
             margin-top: 20px;
             border: none;
             border-radius: 25px;
@@ -40,14 +80,17 @@
             transition: 0.3s;
             text-decoration: none;
         }
+
         .btn:hover {
             background-color: #e0f7ff;
         }
+
         .countdown {
             font-size: 1.5em;
             color: #fff;
             margin-top: 20px;
         }
+
         .form-container {
             background-color: #ffffffaa;
             padding: 20px;
@@ -56,6 +99,7 @@
             width: 90%;
             max-width: 500px;
         }
+
         iframe {
             width: 100%;
             height: 500px;
@@ -64,34 +108,61 @@
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Get $1 Instantly – Complete 1 Offer to Unlock Your Reward!</h1>
-    <p>Finish one quick offer and claim your $0.5 payout via Wise. It's fast, easy, and secure.</p>
+    <h1>Finish and win $1. – Complete 2 Offer to Unlock Your Reward!</h1>
+    <p>Finish two quick offer and claim your 1$ payout via Wise Bank. It's fast, easy, and secure.</p>
 
     <a href="https://bigappboi.com/cl/i/e6qq4x" class="btn">Start Now</a>
 
-    <div class="countdown" id="countdown">Time left to claim: 2:00</div>
+    <div class="countdown" id="countdown"></div>
 
     <div class="form-container">
         <h3>Submit to Receive Your Reward</h3>
+        <h2>When you finish the presentation, send a screenshot to this email so that you can get paid.</h2>
+        <a class="action-button"
+            href="mailto:sea1.castle.production@gmail.com">
+            Send Screenshot </a>
+
+
         <iframe src="https://forms.gle/fKrWCAWybtRyY6499" allowfullscreen></iframe>
     </div>
 
     <script>
+        /// <!-- let time = 120;
+        //    const countdownEl = document.getElementById('countdown');
+        //     setInterval(() =>
+        //     {
+        //          if (time <= 0)
+        //         {
+        //               countdownEl.innerText = "Offer expired, refresh page.";
+        //            return;
+        //        }
+        //        let minutes = Math.floor(time / 60);
+        //       let seconds = time % 60;
+        //       countdownEl.innerText = `Time left to claim: ${minutes}:${seconds < 10 ? '0' : ''}{seconds}`;
+        //       time--;
+        //    }, 1000); -->
         let time = 120;
         const countdownEl = document.getElementById('countdown');
-        setInterval(() => {
-            if (time <= 0) {
+
+        setInterval(() =>
+        {
+            if (time <= 0)
+            {
                 countdownEl.innerText = "Offer expired, refresh page.";
                 return;
             }
+
             let minutes = Math.floor(time / 60);
             let seconds = time % 60;
-            countdownEl.innerText = `Time left to claim: ${minutes}:${seconds < 10 ? '0' : ''}{seconds}`;
+            countdownEl.innerText = `Time left to claim: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             time--;
         }, 1000);
+
     </script>
 
 </body>
+
 </html>
