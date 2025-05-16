@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get $0.5 Instantly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00c9ff, #92fe9d);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0.5em;
+            color: #fff;
+        }
+        p {
+            font-size: 1.2em;
+            color: #f0f0f0;
+            max-width: 80%;
+        }
+        .btn {
+            background-color: #fff;
+            color: #00c9ff;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #e0f7ff;
+        }
+        .countdown {
+            font-size: 1.5em;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .form-container {
+            background-color: #ffffffaa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            width: 90%;
+            max-width: 500px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Get $1 Instantly – Complete 1 Offer to Unlock Your Reward!</h1>
+    <p>Finish one quick offer and claim your $0.5 payout via Wise. It's fast, easy, and secure.</p>
+
+    <a href="https://bigappboi.com/cl/i/e6qq4x" class="btn">Start Now</a>
+
+    <div class="countdown" id="countdown">Time left to claim: 2:00</div>
+
+    <div class="form-container">
+        <h3>Submit to Receive Your Reward</h3>
+        <iframe src="https://forms.gle/fKrWCAWybtRyY6499" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        let time = 120;
+        const countdownEl = document.getElementById('countdown');
+        setInterval(() => {
+            if (time <= 0) {
+                countdownEl.innerText = "Offer expired, refresh page.";
+                return;
+            }
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            countdownEl.innerText = `Time left to claim: ${minutes}:${seconds < 10 ? '0' : ''}{seconds}`;
+            time--;
+        }, 1000);
+    </script>
+
+</body>
+</html>
